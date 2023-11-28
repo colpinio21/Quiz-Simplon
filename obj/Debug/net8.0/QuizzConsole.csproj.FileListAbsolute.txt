@@ -1,0 +1,14 @@
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\bin\Debug\net8.0\QuizzConsole.exe
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\bin\Debug\net8.0\QuizzConsole.deps.json
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\bin\Debug\net8.0\QuizzConsole.runtimeconfig.json
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\bin\Debug\net8.0\QuizzConsole.dll
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\bin\Debug\net8.0\QuizzConsole.pdb
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\obj\Debug\net8.0\QuizzConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\obj\Debug\net8.0\QuizzConsole.AssemblyInfoInputs.cache
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\obj\Debug\net8.0\QuizzConsole.AssemblyInfo.cs
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\obj\Debug\net8.0\QuizzConsole.csproj.CoreCompileInputs.cache
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\obj\Debug\net8.0\QuizzConsole.dll
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\obj\Debug\net8.0\refint\QuizzConsole.dll
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\obj\Debug\net8.0\QuizzConsole.pdb
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\obj\Debug\net8.0\QuizzConsole.genruntimeconfig.cache
+C:\Users\Alexis\Desktop\Simplon\QuizzConsole\obj\Debug\net8.0\ref\QuizzConsole.dll
