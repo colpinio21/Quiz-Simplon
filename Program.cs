@@ -1,5 +1,6 @@
 ﻿namespace QuizSimplon;
 using System;
+using System.Collections.Concurrent;
 using System.IO;
 class Program
 {
@@ -9,7 +10,7 @@ class Program
              
     static string[] lignes = File.ReadAllLines(cheminFichierCSV);
 
-    private static Dictionary<string, string> questions = new Dictionary<string, string>
+    private static Dictionary<string, string> questionsCode = new Dictionary<string, string>
     {
         {"Quel language est utilisé pour créer des applications Android?", "Java"},
         {"Qu'est-ce que HTML représente?","HyperText Markup Langage"},
@@ -19,8 +20,8 @@ class Program
     static void FaireQuizzAleatoire()
     {
         Console.WriteLine("Vous avez choisi le quizz aléatoire");
-        Console.WriteLine(questions);
-        foreach (var question in questions)
+        Console.WriteLine(questionsCode);
+        foreach (var question in questionsCode)
         {
             Console.WriteLine(question.Key);
             string? userAnswer = Console.ReadLine();
@@ -47,22 +48,49 @@ class Program
     static void QuitterProgramme()
     {
         Console.WriteLine("Vous quittez le programme");
+        Environment.Exit(0);
     }
 
     static void LireCsv() {
 
-     for (int i = 1; i < lignes.Length; i++) {
-            string[] champs = lignes[i].Split(";");
-            string question = champs[0];
-            string reponse1 = champs[1];
-            string reponse2 = champs[2];
-            string reponse3 = champs[3];
-            string numeroBonneReponse = champs[4];
+        foreach (string ligne in lignes) {
+            string[] parts = ligne.Split(";");
+            string question = parts[0];
+            string[] answers = parts[1].Split("/");
+            int correctAnswerIndex = int.Parse(parts[2]) -1;
+            Console.WriteLine("Question: " + question);
 
-            Console.WriteLine($"Question : {question}");
-            Console.WriteLine($"Réponses : {reponse1}, {reponse2}, {reponse3}");
-            Console.WriteLine($"La bonne réponse est la réponse : {numeroBonneReponse}");
+            for (int i = 0; i < answers.Length; i++)
+            {
+                Console.WriteLine($"{i+1}. {answers[i]}");
+            }
+
+            bool validInput = false;
+            int userInput = 0;
+
+            while (!validInput)
+            {
+            Console.WriteLine("Entrez votre réponse (1, 2, 3, ect..): ");
+            string? input = Console.ReadLine();
+                if (int.TryParse(input, out userInput))
+                    {
+                        validInput = true;
+                    } else {
+                        Console.WriteLine("Entrez un nombre valide.");
+                    }
+            }        
+                    {
+                        if (userInput == correctAnswerIndex) {
+                            Console.WriteLine("La réponse est correcte");
+                        } else {
+                            Console.WriteLine("La réponse est incorrecte");
+                        }
+                    } 
+
+            Console.WriteLine("Réponse correcte: " + answers[correctAnswerIndex]);
+            Console.WriteLine();
         }
+
     }
     static void Main(string[] args)
     {
